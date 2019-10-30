@@ -19,6 +19,7 @@ before_script:
   - unzip chromedriver_linux64.zip -d /home/travis/build/iFaxity/js-projekt-client
 script:
   - forever start -c 'yarn serve' ./
+  - sleep 15
   - yarn run test
 after_script:
   - forever stopall
