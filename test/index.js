@@ -87,7 +87,7 @@ test.describe('Page', () => {
     await $form.submit();
 
     // Wait until form has been submitted properly
-    await browser.wait(until.urlIs(URL), 10000);
+    await browser.wait(until.elementLocated(By.css('h2')), 5000);
     await assertTitle('Hem');
     await assertUrl('/');
   });
