@@ -1,0 +1,14 @@
+build:
+  environment:
+    node: 12
+    selenium: true
+    variables:
+      NODE_ENV: 'test'
+      API_URL: 'https://cake-api.faxity.se'
+
+  tests:
+    before:
+      - command: yarn serve
+        background: true
+    override:
+      - command: yarn test
