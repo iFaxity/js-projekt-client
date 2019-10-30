@@ -1,0 +1,53 @@
+@import 'normalize.css/normalize.css';
+
+html, body {
+  //height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+}
+
+button {
+  color: #397eff;
+  border: none;
+  outline: none;
+  padding: 0.6em 1.5em;
+  margin: 0.3em 0.5em;
+  border-radius: 0.2em;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    color: #888;
+  }
+
+  &:hover:not(:disabled) {
+    background: rgb(57, 126, 255, 0.2);
+  }
+
+  &.solid {
+    color: #fff;
+    background: #397eff;
+    box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.4);
+
+    &:disabled {
+      background: #888;
+    }
+
+    &:hover:not(:disabled) {
+      background: #2e64c9;
+      box-shadow: 0 0.4em 0.4em 0 rgba(0, 0, 0, 0.4);
+    }
+  }
+}

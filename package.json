@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "jsramverk",
+  "version": "6.1.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "app.js",
+  "scripts": {
+    "preserve": "rm -rf dist",
+    "serve": "parcel src/index.html --open",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build src/index.html --public-url /",
+    "predeploy": "npm run build",
+    "deploy": "rsync -av dist/* christian@faxity.se:/var/www/jsramverk/html",
+    "test": "mocha test/*.js"
+  },
+  "browserslist": [
+    ">1%",
+    "not IE <= 11"
+  ],
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "socket.io-client": "^2.3.0",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-router": "^3.1.2",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "babel-plugin-istanbul": "^5.2.0",
+    "mocha": "^6.2.0",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.4",
+    "sass": "^1.22.10",
+    "selenium-webdriver": "3.6.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
