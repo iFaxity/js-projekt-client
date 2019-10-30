@@ -13,7 +13,7 @@
     "prebuild": "rm -rf dist",
     "build": "parcel build src/index.html --public-url /",
     "predeploy": "npm run build",
-    "deploy": "rsync -av dist/* christian@faxity.se:/var/www/jsramverk/html",
+    "deploy": "rsync -Drltv dist/* christian@faxity.se:/var/www/cake/html",
     "test": "mocha test/*.js"
   },
   "browserslist": [
