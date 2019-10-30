@@ -15,7 +15,7 @@ before_install:
   - yarn global add forever
 
 before_script:
-  - wget https://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
+  - wget https://chromedriver.storage.googleapis.com/78.0.3904.70/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /home/travis/build/iFaxity/jsramverk
 script:
   - forever start -c 'yarn serve' ./
